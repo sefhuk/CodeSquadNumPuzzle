@@ -89,6 +89,17 @@ public class NumPuzzle {
         puzzle.set(two, tmp);
     }
 
+    public static int[] extractNumbers(String input) {
+
+        String[] tokens = input.split(",");
+
+        int[] numbers = new int[2];
+        numbers[0] = Integer.parseInt(tokens[0].trim());
+        numbers[1] = Integer.parseInt(tokens[1].trim());
+
+        return numbers;
+    }
+
     public static void main(String[] args) {
 
 
