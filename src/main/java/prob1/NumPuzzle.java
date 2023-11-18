@@ -104,6 +104,17 @@ public class NumPuzzle {
         System.out.println(puzzle.toString());
     }
 
+    public static boolean isSorted(ArrayList<Integer> puzzle) {
+        for (int i = 0; i < 8; i++) {
+            if (puzzle.get(i) != i + 1) {
+
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public static void main(String[] args) {
 
 
