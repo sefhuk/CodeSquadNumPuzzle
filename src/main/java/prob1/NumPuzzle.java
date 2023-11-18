@@ -100,6 +100,10 @@ public class NumPuzzle {
         return numbers;
     }
 
+    public static void printPuzzleStatus(ArrayList<Integer> puzzle) {
+        System.out.println(puzzle.toString());
+    }
+
     public static void main(String[] args) {
 
 
