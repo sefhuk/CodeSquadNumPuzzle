@@ -83,6 +83,12 @@ public class NumPuzzle {
         return puzzle;
     }
 
+    public static void swap(ArrayList<Integer> puzzle, int one, int two) {
+        int tmp = puzzle.get(one);
+        puzzle.set(one, puzzle.get(two));
+        puzzle.set(two, tmp);
+    }
+
     public static void main(String[] args) {
 
 
