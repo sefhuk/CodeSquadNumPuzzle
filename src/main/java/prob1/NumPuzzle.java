@@ -67,6 +67,22 @@ public class NumPuzzle {
         return true;
     }
 
+    public static ArrayList<Integer> generatePuzzle() {
+
+        ArrayList<Integer> puzzle = new ArrayList<>();
+
+        Random random = new Random();
+
+        while (puzzle.size() != 8) {
+            int randomNumber = random.nextInt(8) + 1;
+            if (!puzzle.contains(randomNumber)) {
+                puzzle.add(randomNumber);
+            }
+        }
+
+        return puzzle;
+    }
+
     public static void main(String[] args) {
 
 
