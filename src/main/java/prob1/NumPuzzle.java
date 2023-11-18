@@ -117,6 +117,32 @@ public class NumPuzzle {
 
     public static void main(String[] args) {
 
+        int turn = 1;
+        ArrayList<Integer> puzzle = generatePuzzle();
 
+        System.out.println("간단 숫자 퍼즐");
+
+        while (true) {
+            System.out.println("Turn " + turn++);
+            printPuzzleStatus(puzzle);
+
+            while (true) {
+                String input = getInput();
+
+                if (isInputValid(input)) {
+                    int[] numbers = extractNumbers(input);
+                    swap(puzzle, puzzle.indexOf(numbers[0]), puzzle.indexOf(numbers[1]));
+                    System.out.println();
+                    break;
+                } else {
+                    System.out.println("잘못 입력하셨습니다. 다시 입력해 주세요.\n");
+                }
+            }
+            if (isSorted(puzzle)) {
+                System.out.println("축하합니다! " + turn + "턴만에 퍼즐을 완성하셨습니다!");
+                break;
+            }
+        }
     }
+
 }
