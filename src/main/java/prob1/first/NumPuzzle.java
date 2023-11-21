@@ -134,6 +134,7 @@ public class NumPuzzle {
                     System.out.println("잘못 입력하셨습니다. 다시 입력해 주세요.\n");
                 }
             }
+
             if (isSorted(puzzle)) {
                 System.out.println("축하합니다! " + turn + "턴만에 퍼즐을 완성하셨습니다!");
                 break;
