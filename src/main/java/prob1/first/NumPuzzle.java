@@ -4,7 +4,7 @@ import java.util.*;
 
 public class NumPuzzle {
 
-    private static int turn = 1;
+    private static int turn = 0;
 
     public static String getInput() {
 
@@ -117,9 +117,9 @@ public class NumPuzzle {
         return true;
     }
 
-    public static void start(ArrayList<Integer> puzzle){
+    public static void start(ArrayList<Integer> puzzle) {
         while (true) {
-            System.out.println("Turn " + turn++);
+            System.out.println("Turn " + ++turn);
             printPuzzleStatus(puzzle);
 
             while (true) {
