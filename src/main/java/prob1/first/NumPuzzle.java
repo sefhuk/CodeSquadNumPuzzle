@@ -1,4 +1,4 @@
-package main.java.prob1;
+package main.java.prob1.first;
 
 import java.util.*;
 
