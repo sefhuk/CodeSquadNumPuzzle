@@ -117,12 +117,7 @@ public class NumPuzzle {
         return true;
     }
 
-    public static void main(String[] args) {
-
-        ArrayList<Integer> puzzle = generatePuzzle();
-
-        System.out.println("간단 숫자 퍼즐");
-
+    public static void start(ArrayList<Integer> puzzle){
         while (true) {
             System.out.println("Turn " + turn++);
             printPuzzleStatus(puzzle);
@@ -144,6 +139,13 @@ public class NumPuzzle {
                 break;
             }
         }
+    }
+
+    public static void main(String[] args) {
+
+        ArrayList<Integer> puzzle = generatePuzzle();
+        System.out.println("간단 숫자 퍼즐");
+        start(puzzle);
     }
 
 }
