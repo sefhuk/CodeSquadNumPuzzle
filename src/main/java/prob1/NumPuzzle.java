@@ -4,6 +4,8 @@ import java.util.*;
 
 public class NumPuzzle {
 
+    private static int turn = 1;
+
     public static String getInput() {
 
         Scanner sc = new Scanner(System.in);
@@ -117,7 +119,6 @@ public class NumPuzzle {
 
     public static void main(String[] args) {
 
-        int turn = 1;
         ArrayList<Integer> puzzle = generatePuzzle();
 
         System.out.println("간단 숫자 퍼즐");
