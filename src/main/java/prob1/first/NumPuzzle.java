@@ -1,4 +1,4 @@
-package main.java.prob1.first;
+package prob1.first;
 
 import java.util.*;
 
@@ -6,6 +6,11 @@ public class NumPuzzle {
 
     private static int turn = 0;
 
+    /**
+     * 사용자로부터 숫자를 입력받는 함수
+     *
+     * @return 입력받은 문자열
+     */
     public static String getInput() {
 
         Scanner sc = new Scanner(System.in);
@@ -14,6 +19,13 @@ public class NumPuzzle {
         return sc.nextLine();
     }
 
+    /**
+     * 입력받은 문자 토큰의 공백 규칙을 확인하는 함수
+     *
+     * @param token 문자열의 한 토큰
+     * @param index 토큰 배열에서의 해당 인덱스
+     * @return 규칙이 맞는지에 대한 여부
+     */
     public static boolean checkSpaceRule(String token, int index) {
 
         if (index == 0) {
@@ -31,6 +43,12 @@ public class NumPuzzle {
         return true;
     }
 
+    /**
+     * 입력받은 문자 토큰이 정수인지 확인하는 함수
+     *
+     * @param token 문자열의 한 토큰
+     * @return 정수 여부
+     */
     public static boolean checkNumericRule(String token) {
 
         try {
@@ -42,6 +60,12 @@ public class NumPuzzle {
 
     }
 
+    /**
+     * 입력받은 정수 토큰의 범위가 올바른지 확인하는 함수
+     *
+     * @param number 정수 토큰
+     * @return 범위가 올바른지에 대한 여부
+     */
     public static boolean checkRangeRule(int number) {
 
         if (number < 1 || number > 8) {
@@ -51,6 +75,13 @@ public class NumPuzzle {
         return true;
     }
 
+    /**
+     * 사용자가 입력받은 문자열이 규칙을 지키는지 확인하는 함수
+     * 위 3개의 함수를 통해 순서대로 확인함.
+     *
+     * @param input 입력받은 문자열
+     * @return 규칙이 맞는지에 대한 여부
+     */
     public static boolean isInputValid(String input) {
 
         String[] tokens = input.split(",");
@@ -69,6 +100,11 @@ public class NumPuzzle {
         return true;
     }
 
+    /**
+     * 랜덤 퍼즐을 생성하는 함수
+     *
+     * @return 생성된 랜덤 퍼즐 List
+     */
     public static ArrayList<Integer> generatePuzzle() {
 
         ArrayList<Integer> puzzle = new ArrayList<>();
@@ -85,12 +121,26 @@ public class NumPuzzle {
         return puzzle;
     }
 
+    /**
+     * 퍼즐에서 임의의 두 값을 서로 교환하는 함수
+     *
+     * @param puzzle 현재 퍼즐 List
+     * @param one 교환 할 첫 번째 퍼즐의 인덱스
+     * @param two 교환 할 두 번째 퍼즐의 인덱스
+     */
     public static void swap(ArrayList<Integer> puzzle, int one, int two) {
         int tmp = puzzle.get(one);
         puzzle.set(one, puzzle.get(two));
         puzzle.set(two, tmp);
     }
 
+    /**
+     * 사용자가 입력한 문자열로부터 정수 두개를 추출하는 함수
+     * 주어진 규칙에 위반되지 않는 전제가 필요함.
+     *
+     * @param input 입력받은 문자열
+     * @return 정수 두 개를 담은 배열
+     */
     public static int[] extractNumbers(String input) {
 
         String[] tokens = input.split(",");
@@ -102,10 +152,21 @@ public class NumPuzzle {
         return numbers;
     }
 
+    /**
+     * 현재 퍼즐 상태를 출력하는 함수
+     *
+     * @param puzzle 현재 퍼즐 List
+     */
     public static void printPuzzleStatus(ArrayList<Integer> puzzle) {
         System.out.println(puzzle.toString());
     }
 
+    /**
+     * 퍼즐이 정상적으로 정렬 되었는지 확인하는 함수
+     *
+     * @param puzzle 현재 퍼즐 List
+     * @return 정렬 여부
+     */
     public static boolean isSorted(ArrayList<Integer> puzzle) {
         for (int i = 0; i < 8; i++) {
             if (puzzle.get(i) != i + 1) {
@@ -117,6 +178,11 @@ public class NumPuzzle {
         return true;
     }
 
+    /**
+     * 퍼즐 게임 시작 함수
+     *
+     * @param puzzle 현재 퍼즐 List
+     */
     public static void start(ArrayList<Integer> puzzle) {
         while (true) {
             System.out.println("Turn " + ++turn);
