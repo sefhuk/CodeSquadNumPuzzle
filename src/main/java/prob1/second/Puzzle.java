@@ -72,4 +72,20 @@ public class Puzzle {
         }
         System.out.println();
     }
+
+    /**
+     * 퍼즐이 완성 여부를 확인하는 함수
+     *
+     * @return 퍼즐 완성 여부
+     */
+    public boolean isSorted() {
+
+        for (int i = 0; i < 16; i++) {
+            if (puzzle.get(i) != i + 1) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
