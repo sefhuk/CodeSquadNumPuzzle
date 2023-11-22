@@ -1,4 +1,4 @@
-# 1차원 숫자 퍼즐
+# 15 퍼즐
 <hr>
 
 ## Puzzle.class
@@ -39,4 +39,5 @@
 ## 실행 결과
 + 실행 환경 `jdk-11`
 + 실행 화면
-  <img width="280" alt="스크린샷 2023-11-22 오후 10 28 47" src="https://github.com/sefhuk/masters-practice/assets/13714036/8a371944-ea13-4593-a131-d46e38bef086">
+
+  <img width="279" alt="스크린샷 2023-11-22 오후 10 49 50" src="https://github.com/sefhuk/masters-practice/assets/13714036/a56e6b95-1c7d-4c94-ad1b-6ad421b2cfa9">
