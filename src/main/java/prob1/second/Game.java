@@ -72,4 +72,29 @@ public class Game {
         puzzle.set(puzzle.indexOf(target), 16);
         puzzle.set(emptyIndex, target);
     }
+
+    public static void main(String[] args) {
+
+        Puzzle puzzle = new Puzzle(10); // (예시) 10회 섞은 퍼즐
+        System.out.println("재미있는 15 퍼즐!");
+
+        int turn = 1;
+        while (!puzzle.isSorted()) {
+            System.out.println("\nTurn " + turn);
+            puzzle.print();
+
+            int checkResult = checkNumericRule(getInput());
+            if (checkResult != 0) {
+                if (isMovable(puzzle.getPuzzle(), checkResult)) {
+                    move(puzzle.getPuzzle(), checkResult, puzzle.getEmptyIndex());
+                    turn++;
+                    continue;
+                }
+            }
+
+            System.out.println("\n잘못 입력하셨습니다. 다시 입력해 주세요.");
+        }
+
+        System.out.println("\n축하합니다! " + turn + "턴만에 퍼즐을 완성했습니다!");
+    }
 }
