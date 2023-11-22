@@ -52,4 +52,24 @@ public class Puzzle {
     public List<Integer> getPuzzle() {
         return this.puzzle;
     }
+
+    /**
+     * 퍼즐의 상태를 출력하는 함수
+     */
+    public void print() {
+
+        for (int i = 0; i < 16; i++) {
+            if (i != 0 && i % 4 == 0) {
+                System.out.println();
+            }
+
+            int num = this.puzzle.get(i);
+            if (num != 16) {
+                System.out.printf("[%2d]", num);
+            } else {
+                System.out.print("[  ]");
+            }
+        }
+        System.out.println();
+    }
 }
