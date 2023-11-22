@@ -95,6 +95,6 @@ public class Game {
             System.out.println("\n잘못 입력하셨습니다. 다시 입력해 주세요.");
         }
 
-        System.out.println("\n축하합니다! " + turn + "턴만에 퍼즐을 완성했습니다!");
+        System.out.println("\n축하합니다! " + --turn + "턴만에 퍼즐을 완성했습니다!");
     }
 }
