@@ -88,4 +88,13 @@ public class Puzzle {
 
         return true;
     }
+
+    /**
+     * 퍼즐의 빈 공간(16)의 인덱스를 반환하는 함수
+     *
+     * @return 인덱스 값
+     */
+    public int getEmptyIndex() {
+        return this.puzzle.indexOf(16);
+    }
 }
