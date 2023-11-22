@@ -33,7 +33,7 @@
 
 ### `void move(List<Integer> puzzle, int target, int emptyIndex)`
 + 해당 번호의 퍼즐을 빈공간으로 이동시킵니다.
-+ 
+
 <hr>
 
 ## 실행 결과
