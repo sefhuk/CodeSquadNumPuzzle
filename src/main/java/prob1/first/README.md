@@ -71,3 +71,4 @@
 ## 실행 결과
 + 실행 환경 `jdk-11`
 + 실행 화면
+<img width="280" alt="스크린샷 2023-11-22 오후 10 28 47" src="https://github.com/sefhuk/masters-practice/assets/13714036/8a371944-ea13-4593-a131-d46e38bef086">
