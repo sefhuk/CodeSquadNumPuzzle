@@ -43,4 +43,13 @@ public class Puzzle {
 
         this.puzzle = puzzle;
     }
+
+    /**
+     * 퍼즐을 반환 함수
+     *
+     * @return 현재 퍼즐 List
+     */
+    public List<Integer> getPuzzle() {
+        return this.puzzle;
+    }
 }
