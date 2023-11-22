@@ -59,4 +59,17 @@ public class Game {
 
         return false;
     }
+
+    /**
+     * 선택된 번호 퍼즐을 빈 공간으로 이동시키는 함수
+     *
+     * @param puzzle 현재 퍼즐 List
+     * @param target 이동시킬 번호
+     * @param emptyIndex 퍼즐의 빈 공간(16) 인덱스
+     */
+    public static void move(List<Integer> puzzle, int target, int emptyIndex) {
+
+        puzzle.set(puzzle.indexOf(target), 16);
+        puzzle.set(emptyIndex, target);
+    }
 }
