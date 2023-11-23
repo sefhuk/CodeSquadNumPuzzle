@@ -105,9 +105,9 @@ public class NumPuzzle {
      *
      * @return 생성된 랜덤 퍼즐 List
      */
-    public static ArrayList<Integer> generatePuzzle() {
+    public static List<Integer> generatePuzzle() {
 
-        ArrayList<Integer> puzzle = new ArrayList<>();
+        List<Integer> puzzle = new ArrayList<>();
 
         Random random = new Random();
 
@@ -128,7 +128,7 @@ public class NumPuzzle {
      * @param one 교환 할 첫 번째 퍼즐의 인덱스
      * @param two 교환 할 두 번째 퍼즐의 인덱스
      */
-    public static void swap(ArrayList<Integer> puzzle, int one, int two) {
+    public static void swap(List<Integer> puzzle, int one, int two) {
         int tmp = puzzle.get(one);
         puzzle.set(one, puzzle.get(two));
         puzzle.set(two, tmp);
@@ -157,7 +157,7 @@ public class NumPuzzle {
      *
      * @param puzzle 현재 퍼즐 List
      */
-    public static void printPuzzleStatus(ArrayList<Integer> puzzle) {
+    public static void printPuzzleStatus(List<Integer> puzzle) {
         System.out.println(puzzle.toString());
     }
 
@@ -167,7 +167,7 @@ public class NumPuzzle {
      * @param puzzle 현재 퍼즐 List
      * @return 정렬 여부
      */
-    public static boolean isSorted(ArrayList<Integer> puzzle) {
+    public static boolean isSorted(List<Integer> puzzle) {
         for (int i = 0; i < 8; i++) {
             if (puzzle.get(i) != i + 1) {
 
@@ -183,7 +183,7 @@ public class NumPuzzle {
      *
      * @param puzzle 현재 퍼즐 List
      */
-    public static void start(ArrayList<Integer> puzzle) {
+    public static void start(List<Integer> puzzle) {
         while (true) {
             System.out.println("Turn " + ++turn);
             printPuzzleStatus(puzzle);
@@ -210,7 +210,7 @@ public class NumPuzzle {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> puzzle = generatePuzzle();
+        List<Integer> puzzle = generatePuzzle();
         System.out.println("간단 숫자 퍼즐");
         start(puzzle);
     }
